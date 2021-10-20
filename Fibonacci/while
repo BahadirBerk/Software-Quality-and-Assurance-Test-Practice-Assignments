@@ -1,0 +1,30 @@
+using System.Diagnostics;
+using System;
+class program
+{
+    static void Main()
+    {
+        Stopwatch stopwatch = new Stopwatch();
+        stopwatch.Start();
+        Console.WriteLine("kaça adım yazdırılsın? :");
+        int num = int.Parse(Console.ReadLine());
+
+        int first = 1;
+        Console.Write("{0},", first);
+        int second = 1;
+        Console.Write("{0},", first);
+        int sum = 0;
+        
+        while(sum <= num)
+        {
+            sum = first + second;
+            Console.Write("{0},",sum);
+            first = second;
+            second = sum;
+        }
+
+        
+        stopwatch.Stop();
+        Console.WriteLine("Geçen Süre:  "+stopwatch.Elapsed);
+    }
+}
