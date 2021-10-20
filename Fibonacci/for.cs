@@ -1,6 +1,6 @@
 using System.Diagnostics;
 using System;  
-  public class FibonacciExample  
+  public class Fibonacci
    {  
      public static void Main(string[] args)  
       {  
