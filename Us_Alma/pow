@@ -1,0 +1,18 @@
+using System;
+using System.Diagnostics;
+class Us_Al {
+ 
+    static public void Main()
+    {
+        Stopwatch stopwatch = new Stopwatch();
+        stopwatch.Start();
+ 
+        double pow_ab = Math.Pow(5, 2);
+        
+        Console.WriteLine(pow_ab);
+        
+        stopwatch.Stop();
+        Console.WriteLine("Geçen Süre:  "+stopwatch.Elapsed);
+  
+    }
+}

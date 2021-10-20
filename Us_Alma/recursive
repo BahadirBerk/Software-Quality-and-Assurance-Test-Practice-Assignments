@@ -1,0 +1,30 @@
+using System;
+using System.Diagnostics;
+using System.IO;
+
+public class Us_al {
+   public static void Main(string[] args) 
+   {
+       Stopwatch stopwatch = new Stopwatch();
+       stopwatch.Start();
+       int n = 5;
+       int p = 2;
+       long res;
+       res = power(n, p);
+       Console.WriteLine(res);
+       stopwatch.Stop();
+       Console.WriteLine("Geçen Süre:  "+stopwatch.Elapsed);
+      
+   }
+   
+
+   static long power (int n, int p) {
+      if (p!=0) {
+         return (n * power(n, p - 1));
+      }
+      
+      return 1;
+      
+   }
+   
+}
