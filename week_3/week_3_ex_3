@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Diagnostics;
+
+namespace Kitaplar
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Kitap adı giriniz: ");
+            string kitap = Console.ReadLine();
+            Stopwatch stopwatch = new Stopwatch();
+            //stopwatch.Start();
+            Dictionary<int, string> kitaplar = new Dictionary<int, string>();
+            kitaplar.Add(1111, "bahadir");
+            kitaplar.Add(2222, "yazılım");
+            kitaplar.Add(3333, "kalite");
+            kitaplar.Add(4444, "güvencesi");
+            Console.WriteLine("Kitap No giriniz(1111,2222,3333,4444): ");
+            int No = int.Parse(Console.ReadLine());
+            //if (kitap == "bahadir")
+            //    Console.WriteLine("Kitap Mevcut: " + kitaplar[No]);
+            //else if (kitap == "yazılım")
+            //    Console.WriteLine("Kitap Mevcut: " + kitaplar[No]);
+            //else if (kitap == "kalite")
+            //    Console.WriteLine("Kitap Mevcut: " + kitaplar[No]);
+            //else if (kitap == "güvencesi")
+            //    Console.WriteLine("Kitap Mevcut: " + kitaplar[No]);
+            //stopwatch.Stop();
+            //Console.WriteLine("Çalışma Süresi: " + stopwatch.Elapsed);
+            //Console.ReadLine();
+            stopwatch.Start();
+            switch (kitap)
+            {
+                case "bahadir":
+                    Console.WriteLine("Bu kitap Mevcut: " + kitaplar[No]);
+                    break;
+                case "yazılım":
+                    Console.WriteLine("Bu kitap Mevcut: " + kitaplar[No]);
+                    break;
+                case "kalite":
+                    Console.WriteLine("Bu kitap Mevcut: " + kitaplar[No]);
+                    break;
+                case "güvencesi":
+                    Console.WriteLine("Bu kitap Mevcut:  " + kitaplar[No]);
+                    break;
+
+            }
+            stopwatch.Stop();
+            Console.WriteLine("Çalışma Süresi: " + stopwatch.Elapsed);
+            Console.ReadLine();
+        }
+
+
+    }
+}
